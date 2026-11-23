@@ -1,7 +1,7 @@
 # ADR 0002: Modular design: mothership plus a detachable scout
 
 - Date: 2026-11-23
-- Status: proposed (waiting for the owner's pick)
+- Status: accepted (owner chose option 1 on 2026-11-23)
 
 ## Context
 The owner wants modular units that split apart to reach hard-to-reach spaces.

@@ -17,13 +17,12 @@ product to sell worldwide at low cost. Inspired by, but not copied from,
 
 ## Decisions made
 - Fresh repo, own design (ADR 0001).
-- Mothership + 1 scout (ADR 0002, still **proposed**: waiting for the owner's pick).
+- Mothership + 1 scout (ADR 0002, accepted by the owner).
 - Licenses (ADR 0003).
 - Owner has a 3D printer, a reasonable budget, and an 8 GB RAM laptop.
 
 ## Open questions
 - Owner's laptop OS (decides Docker vs native vs WSL2 setup).
-- Confirm the modular design option (ADR 0002).
 
 ## Next steps
 1. Docker dev image with ROS2 Jazzy + Gazebo Harmonic that fits 8 GB.

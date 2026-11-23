@@ -1,0 +1,10 @@
+Robocume
+Copyright 2026 The Robocume authors
+
+This product is an original design. It was informed by studying these
+open-source projects (no code or design files copied unless listed below):
+- OOMWOO by makerspet (https://github.com/makerspet/oomwoo), Apache-2.0
+- ROS2, Nav2 and slam_toolbox (used as dependencies under their own licenses)
+
+Reused third-party code:
+- none yet

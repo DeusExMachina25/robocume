@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  robocume-link:
+    name: robocume_link (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    defaults:
+      run:
+        working-directory: software/robocume_link
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q
+
+  docs:
+    name: Required docs exist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check handoff files
+        run: |
+          for f in README.md LICENSE NOTICE docs/HANDOFF.md docs/CHANGELOG.md docs/ARCHITECTURE.md; do
+            test -s "$f" || { echo "Missing or empty: $f"; exit 1; }
+          done

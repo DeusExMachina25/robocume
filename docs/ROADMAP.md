@@ -23,10 +23,13 @@ a release tag), which doubles as marketing content (see [BUSINESS.md](BUSINESS.m
 - [ ] Mothership v1 chassis with Roborock spare wheels, brush, fan
 - [ ] RP2350 I/O board on a breadboard, then a custom PCB
 - [ ] Scout bay with ramp and pogo-pin charging
+- [ ] Standard head mount with head ID; brush roll and rubber roller heads (swapped by hand)
 - [ ] Same software from Phase 1 running on the real robots
 - [ ] Home Assistant integration (start, stop, battery, status)
 
 ## After the MVP
+- Automatic head swapping at the dock (head rack + latch), heads chosen per room
+- More heads: mop pad module, deep-carpet brush, edge/corner brush
 - Auto-empty the scout's bin into the mothership
 - Charging dock for the mothership, with auto-empty
 - Room and zone cleaning, schedules, no-go zones

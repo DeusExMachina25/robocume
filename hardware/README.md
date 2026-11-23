@@ -6,7 +6,8 @@ Our own designs, licensed CERN-OHL-S-2.0 (see [ADR 0003](../docs/decisions/0003-
 |---|---|
 | `mothership/` | Chassis CAD (source + STEP + printable STL/3MF), bumper, brush and fan mounts, scout bay |
 | `scout/` | Low-profile scout chassis, mini fan duct, bin, pogo-contact mount |
-| `dock/` | Mothership charging dock |
+| `dock/` | Mothership charging dock (later: head rack for auto-swap) |
+| `heads/` | Swappable cleaning heads and the standard head mount |
 | [`BOM.md`](BOM.md) | Parts list and rough prices |
 
 ## Rules for CAD files

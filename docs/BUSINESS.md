@@ -24,6 +24,11 @@ support. India-specific pricing for students.
 - Sell on Tindie (worldwide, low fees, made for open hardware) and in India
   through a simple store (Instamojo or Razorpay payment pages).
 
+## 4b. Sell heads separately
+Swappable heads (rubber roller, carpet brush, mop module) are cheap to print and
+give repeat sales, like razor blades. Sell printed heads, or the files plus the
+small parts.
+
 ## 5. College workshops and lab kits (India)
 Engineering colleges and robotics clubs pay for hands-on ROS2 workshops.
 Robocume plus the simulation means students can learn without hardware first.

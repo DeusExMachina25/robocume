@@ -38,6 +38,7 @@ recharge and empty its tiny bin. See [ADR 0002](decisions/0002-mothership-and-sc
                        │   wheels · brush · fan · bumper · cliff  │                            │
                        │   battery · SAFETY STOPS                 │                            │
                        │  Scout bay: ramp · pogo charging pins · IR homing beacon · empty port │
+                       │  Head mount: swappable cleaning head · pogo pins (power + head ID)   │
                        └──────────────────────────────────────────┼────────────────────────────┘
                                                                   │
                        ┌──────────────────────── SCOUT (≤ 6 cm tall) ──────────────────────────┐
@@ -52,7 +53,8 @@ recharge and empty its tiny bin. See [ADR 0002](decisions/0002-mothership-and-sc
 |---|---|---|---|
 | Mothership chassis + mechanics | `hardware/mothership` | 3D printed | Body, bumper, brush, fan, bin, scout bay |
 | Scout chassis + mechanics | `hardware/scout` | 3D printed | Low-profile body, mini fan, bin, pogo contacts |
-| Charging dock | `hardware/dock` | 3D printed + PCB | Charges the mothership (scout charges inside it) |
+| Charging dock | `hardware/dock` | 3D printed + PCB | Charges the mothership (scout charges inside it); later holds the head rack |
+| Cleaning heads | `hardware/heads` | 3D printed | Swappable heads on one standard mount (brush, rubber roller, later mop) |
 | Mothership I/O firmware | `firmware/mothership-io` | RP2350 | Motors, sensors, safety, battery |
 | Scout firmware | `firmware/scout` | ESP32-S3 | Drive, sensing, safety, `robocume_link` client |
 | ROS2 packages | `ros2_ws/src` | Pi 5 / laptop | Description, sim, bringup, navigation, coordinator |
@@ -69,7 +71,10 @@ recharge and empty its tiny bin. See [ADR 0002](decisions/0002-mothership-and-sc
 3. **ROS2 topics:** standard where possible (`/cmd_vel`, `/scan`, `/odom`, `/map`,
    `/battery_state`). Scout topics live under `/scout/...`. **TBD:** full list in
    `ros2_ws/src/README.md`.
-4. **Dashboard ↔ robot:** rosbridge WebSocket in the MVP. **TBD:** REST API later.
+4. **Head mount:** fixed slot shape and pogo-pin layout under the mothership
+   (power + head ID). Versioned like an API. See
+   [ADR 0004](decisions/0004-interchangeable-heads.md).
+5. **Dashboard ↔ robot:** rosbridge WebSocket in the MVP. **TBD:** REST API later.
 
 ## 6. How a scout mission works
 
@@ -99,3 +104,5 @@ recharge and empty its tiny bin. See [ADR 0002](decisions/0002-mothership-and-sc
 - Mothership I/O chip: RP2350 (current pick, cheap and easy) vs STM32.
 - Scout position tracking accuracy under furniture: needs testing in sim.
 - Auto-emptying the scout into the mothership: post-MVP.
+- Head latch type (magnets vs spring latch), and resistor vs EEPROM for head ID.
+- Automatic head swapping at the dock: post-MVP (ADR 0004).

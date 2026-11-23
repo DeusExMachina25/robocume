@@ -19,6 +19,8 @@ product to sell worldwide at low cost. Inspired by, but not copied from,
 - Fresh repo, own design (ADR 0001).
 - Mothership + 1 scout (ADR 0002, accepted by the owner).
 - Licenses (ADR 0003).
+- Interchangeable heads (ADR 0004): hand-swapped on a standard mount in the MVP,
+  auto-swapped at the dock later. Design the mount early; it's an interface.
 - Owner has a 3D printer, a reasonable budget, and an 8 GB RAM laptop.
 
 ## Open questions

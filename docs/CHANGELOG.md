@@ -15,4 +15,7 @@ versions follow [Semantic Versioning](https://semver.org/).
 - Folder layout for hardware, firmware, ROS2 and web, with READMEs.
 - `robocume_link` v0.1.0: mothership–scout frame format with CRC, stream
   decoder and 12 tests.
+- Interchangeable cleaning heads (ADR 0004): standard head mount with head ID in the
+  MVP, automatic swapping at the dock after the MVP. Architecture, roadmap and
+  business plan updated.
 - CI (ruff + pytest on Python 3.10 and 3.12, required docs check), PR and issue templates.

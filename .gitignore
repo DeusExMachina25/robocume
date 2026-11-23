@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ROS2 colcon workspace outputs
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Node / web
+node_modules/
+dist/
+.next/
+
+# Firmware build outputs
+.pio/
+firmware/**/build/
+
+# CAD / slicer temp files
+*.3mf.bak
+*.gcode
+*.FCBak
+*~lock*
+
+# Secrets and local config (never commit these)
+.env
+.env.*
+!.env.example
+secrets/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
